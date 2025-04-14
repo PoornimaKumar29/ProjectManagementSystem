@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dao",
+    "\\entity",
+    "\\exception",
+    "\\util"
+  ],
+  "SelectedNode": "\\util\\DBConnUtil.cs",
+  "PreviewInSolutionExplorer": false
+}

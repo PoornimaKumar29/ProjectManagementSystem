@@ -1,0 +1,1 @@
+﻿Server=POORNIMA\SQLSERVER2022;Database=project_management;Trusted_Connection=True;TrustServerCertificate=True;
