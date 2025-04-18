@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿
+=======
+
+>>>>>>> 659932d8ba7d9f04365aac4895065f55c557287d
 using NUnit.Framework;
 using Project_Management.dao;
 using Project_Management.entity;
