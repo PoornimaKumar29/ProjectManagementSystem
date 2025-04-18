@@ -1,91 +1,4 @@
-﻿//using Project_Management.dao;
-//using Project_Management.entity;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using NUnit.Framework;
-
-//namespace ProjectManagementTest
-//{
-//    class ProjectTest
-//    {
-
-//        [TestFixture]
-//        public class ProjectRepositoryTests
-//        {
-//            private ProjectRepositoryImpl repo;
-
-//            [SetUp]
-//            public void Setup()
-//            {
-//                repo = new ProjectRepositoryImpl();
-//            }
-
-//            // 1. Test: Employee creation
-//            [Test]
-//            public void CreateEmployee_ShouldReturnTrue_WhenValidEmployeeGiven()
-//            {
-//                var employee = new Employee
-//                {
-//                    EmployeeName = "John Doe",
-//                    Designation = "Developer",
-//                    Gender = "Male",
-//                    Salary = 50000,
-//                    ProjectId = 1 // Make sure project with ID 1 exists
-//                };
-
-//                bool result = repo.CreateEmployee(employee);
-
-//                Assert.IsTrue(result, "Employee should be created successfully.");
-//            }
-
-//            // 2. Test: Task creation
-//            [Test]
-//            public void CreateTask_ShouldReturnTrue_WhenValidTaskGiven()
-//            {
-//                var task = new ProjectTask
-//                {
-//                    TaskName = "Exeption handling",
-//                    AllocationDate = new DateTime(2025, 04,03),
-//                    DeadlineDate = DateTime.Now.AddDays(7),
-//                    Status = "Started",
-//                    ProjectId = 4// Make sure project with ID 1 exists
-//                };
-
-//                bool result = repo.CreateTask(task);
-
-//                Assert.IsTrue(result, "Task should be created successfully.");
-//            }
-
-//            // 3. Test: Search projects & tasks assigned to employee
-//            [Test]
-//            public void SearchProjectsAndTasks_ShouldReturnData_WhenEmployeeIdIsValid()
-//            {
-//                int validEmployeeId = 1; // Use an existing employee ID with tasks assigned
-
-//                var result = repo.SearchProjectsAndTasks(validEmployeeId);
-
-//                Assert.IsNotNull(result, "Result should not be null.");
-//                Assert.IsTrue(result.Count > 0, "Projects and tasks should be returned.");
-//            }
-
-//            // 4. Test: Exception when invalid employee ID
-//            [Test]
-//            public void SearchProjectsAndTasks_ShouldThrowException_WhenEmployeeIdIsInvalid()
-//            {
-//                int invalidEmployeeId = -1;
-
-//                var ex = Assert.Throws<Exception>(() => repo.SearchProjectsAndTasks(invalidEmployeeId));
-
-//                Assert.That(ex.Message, Is.EqualTo("No project and tasks found for this employee."));
-//            }
-//        }
-//    }
-
-
-//}
+﻿
 using NUnit.Framework;
 using Project_Management.dao;
 using Project_Management.entity;
@@ -133,7 +46,7 @@ namespace ProjectSystem.Tests
             var task = new ProjectTask
             {
                 TaskName = "UI Interface",
-                ProjectId = 3, // Make sure this project exists in test DB
+                ProjectId = 6, // Make sure this project exists in test DB
                 EmployeeId = null,
                 Status = "Assigned",
                 AllocationDate = DateTime.Now,
@@ -150,12 +63,12 @@ namespace ProjectSystem.Tests
         [Test]
         public void GetParticularTasks_ShouldReturn_TasksForEmployeeInProject()
         {
-            // Arrange
-            int empId = 1; // Ensure valid test employee ID
-            int projectId = 1; // Ensure valid test project ID
+            // Arrang
+            int empId = 2; // Ensure valid test employee ID
+            int projectId = 5; // Ensure valid test project ID
 
             // Act
-            var tasks = _repository.GetParticularTasks(empId, projectId);
+            var tasks = _repository.GetParticularTasks(empId);
 
             // Assert
             Assert.IsNotNull(tasks);

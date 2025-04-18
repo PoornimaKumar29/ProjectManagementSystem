@@ -18,9 +18,7 @@ namespace Project_Management.dao
                 using (SqlConnection conn = DBConnUtil.GetConnection())
                 {
                     if (conn == null)
-                    {
-                        throw new DatabaseConnectionException("Database connection failed.");
-                    }
+                        throw new Exception("Database connection failed.");
 
                     conn.Open();
                     string query = "INSERT INTO Projects (Project_Name, Description, Start_Date, Status) " +
@@ -40,23 +38,21 @@ namespace Project_Management.dao
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while creating the project.", ex);
-            }
+
         }
 
         public bool CreateEmployee(Employee emp)
         {
+            if (string.IsNullOrEmpty(emp.EmployeeName) ||
+        string.IsNullOrEmpty(emp.Designation) ||
+        string.IsNullOrEmpty(emp.Gender) ||
+        emp.Salary <= 0 ||
+        emp.ProjectId == null)
+            {
+                throw new InvalidEntryException("Employee details are missing or invalid.");
+            }
             try
             {
-                if (string.IsNullOrWhiteSpace(emp.EmployeeName) ||
-            string.IsNullOrWhiteSpace(emp.Designation) ||
-            string.IsNullOrWhiteSpace(emp.Gender) ||
-            emp.Salary <= 0)
-                {
-                    throw new InvalidEntryException("One or more employee details are missing or invalid.");
-                }
 
                 using (SqlConnection conn = DBConnUtil.GetConnection())
                 {
@@ -84,10 +80,7 @@ namespace Project_Management.dao
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while creating the employee.", ex);
-            }
+
         }
 
         public bool CreateTask(ProjectTask task)
@@ -114,17 +107,16 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@deadlineDate", task.DeadlineDate);
 
                     int result = cmd.ExecuteNonQuery();
+                   
+
                     return result > 0;
                 }
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                throw new EmployeeNotFoundException("Employee or Project not found.");
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while creating the task.", ex);
-            }
+          
         }
 
         public List<Project> GetAllProjects()
@@ -137,7 +129,7 @@ namespace Project_Management.dao
                 {
                     if (conn == null)
                     {
-                        throw new DatabaseConnectionException("Database connection failed.");
+                        throw new Exception("Database connection failed.");
                     }
 
                     conn.Open();
@@ -165,14 +157,12 @@ namespace Project_Management.dao
 
                 return projects;
             }
-            catch (SqlException ex)
+
+            catch (ProjectNotFoundException ex)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                throw ex;
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while fetching the projects.", ex);
-            }
+
         }
 
         public List<Employee> GetAllEmployees()
@@ -184,10 +174,7 @@ namespace Project_Management.dao
                 using (SqlConnection conn = DBConnUtil.GetConnection())
                 {
                     if (conn == null)
-                    {
                         throw new DatabaseConnectionException("Database connection failed.");
-                    }
-
                     conn.Open();
                     string query = "SELECT * FROM Employee";
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -218,10 +205,11 @@ namespace Project_Management.dao
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
+            catch (EmployeeNotFoundException ex)
             {
-                throw new InvalidEntryException("Error occurred while fetching the employees.", ex);
+                throw ex;
             }
+
         }
 
         public List<ProjectTask> GetAllTasks()
@@ -255,17 +243,19 @@ namespace Project_Management.dao
                         });
                     }
                 }
+                if (tasks.Count == 0)
+                {
+                    throw new TaskNotFoundException("No Tasks found in the database.");
+                }
 
+              
                 return tasks;
             }
             catch (SqlException ex)
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while fetching the tasks.", ex);
-            }
+
         }
 
         public bool AssignProjectToEmployee(int employeeId, int projectId)
@@ -287,20 +277,31 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@empId", employeeId);
 
                     int result = cmd.ExecuteNonQuery();
+
+
+                    if (result == 0)
+                    {
+                        throw new EmployeeNotFoundException($"Employee with ID {employeeId} not found.");
+                    }
+
                     return result > 0;
                 }
             }
             catch (SqlException ex)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                throw new DatabaseConnectionException("Error while executing the update operation in the database.", ex);
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                throw new EmployeeNotFoundException(ex.Message);
             }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while assigning the project to the employee.", ex);
+                throw new ApplicationException("An unexpected error occurred while assigning project to the employee.", ex);
             }
         }
 
-        public bool AssignTaskInProjectToEmployee(int taskId, int projectId,int employeeId)
+        public bool AssignTaskInProjectToEmployee(int taskId, int projectId, int employeeId)
         {
             try
             {
@@ -312,25 +313,38 @@ namespace Project_Management.dao
                     }
 
                     conn.Open();
-                    string query = "UPDATE Tasks SET Employee_Id = @empId WHERE Task_ID = @taskId";
+
+                    string query = "UPDATE Tasks SET Employee_Id = @empId WHERE Task_ID = @taskId AND Project_Id = @projId AND Employee_Id IS NULL";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@empId", employeeId);
                     cmd.Parameters.AddWithValue("@taskId", taskId);
+                    cmd.Parameters.AddWithValue("@projId", projectId);
 
                     int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+
+                    if (result == 0)
+                    {
+                        throw new TaskNotFoundException($"Task with ID {taskId} in project {projectId}");
+                    }
+
+                    return true;
                 }
             }
             catch (SqlException ex)
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
+            catch (TaskNotFoundException ex)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while assigning the task to the employee.", ex);
+                throw new ApplicationException("An unexpected error occurred while assigning the task.", ex);
             }
         }
+
 
         public bool DeleteEmployee(int employeeId)
         {
@@ -344,22 +358,32 @@ namespace Project_Management.dao
                     }
 
                     conn.Open();
-                    string query = "DELETE FROM Employee WHERE Employee_Id = @empId";
 
+                    string query = "DELETE FROM Employee WHERE Employee_Id = @empId";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@empId", employeeId);
 
                     int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+
+                    if (result == 0)
+                    {
+                        throw new EmployeeNotFoundException($"Employee with ID {employeeId} not found.");
+                    }
+
+                    return true; 
                 }
             }
+           
             catch (SqlException ex)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                Console.WriteLine($"Database error: {ex.Message}");
+                return false;
             }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while deleting the employee.", ex);
+                
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+                return false;
             }
         }
 
@@ -376,16 +400,18 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@projId", projectId);
 
                     int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+
+                    if (result == 0)
+                    {
+                        throw new ProjectNotFoundException($"Project with ID {projectId} not found.");
+                    }
+
+                    return true;
                 }
             }
             catch (SqlException ex)
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while deleting the employee.", ex);
             }
         }
 
@@ -407,23 +433,32 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@taskId", taskId);
                     int result = cmd.ExecuteNonQuery();
 
+                   
                     if (result == 0)
                     {
-                        Console.WriteLine($"No task found with Task_ID = {taskId}");
+                        throw new TaskNotFoundException($"Task with ID {taskId} not found.");
                     }
-                    return result > 0;
+
+                    return true; 
                 }
             }
-           
+            catch (TaskNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
             catch (SqlException ex)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                
+                Console.WriteLine($"Database error: {ex.Message}");
+                return false;
             }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while deleting the task.", ex);
+                
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+                return false;
             }
-
         }
 
         public bool UpdateEmployee(Employee emp)
@@ -449,18 +484,32 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@empId", emp.EmployeeId);
 
                     int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+
+                    if (result == 0)
+                    {
+                        throw new EmployeeNotFoundException($"Employee with ID {emp.EmployeeId} not found.");
+                    }
+
+                    return true; 
                 }
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
             }
             catch (SqlException ex)
             {
-                throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+                Console.WriteLine($"Database error: {ex.Message}");
+                return false;
             }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while updating the employee details.", ex);
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+                return false;
             }
         }
+
         public bool UpdateProject(Project project)
         {
             try
@@ -473,6 +522,7 @@ namespace Project_Management.dao
                     }
 
                     conn.Open();
+
                     string query = "UPDATE Projects SET Project_Name = @name, Description = @description, Start_Date = @startdate, Status = @status WHERE Project_Id = @projId";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -483,16 +533,29 @@ namespace Project_Management.dao
                     cmd.Parameters.AddWithValue("@projId", project.ProjectId);
 
                     int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+
+                    if (result == 0)
+                    {
+                        throw new ProjectNotFoundException($"Project with ID {project.ProjectId} not found or no changes were made.");
+                    }
+
+                    return result > 0; 
                 }
             }
             catch (SqlException ex)
             {
+               
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
+            }
+            catch (ProjectNotFoundException ex)
+            {
+                
+                throw ex;  
             }
             catch (Exception ex)
             {
-                throw new InvalidEntryException("Error occurred while updating the project details.", ex);
+               
+                throw new ApplicationException("An unexpected error occurred while updating the project.", ex);
             }
         }
 
@@ -508,34 +571,76 @@ namespace Project_Management.dao
                     }
 
                     conn.Open();
-                    string query = "UPDATE Tasks SET Task_Name = @taskName, Project_Id = @projId, Employee_Id = @empId, Status = @status, Allocation_Date = @allocationDate, Deadline_Date = @deadlineDate WHERE Task_ID = @taskId";
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@taskName", task.TaskName);
-                    cmd.Parameters.AddWithValue("@projId", task.ProjectId);
-                    cmd.Parameters.AddWithValue("@empId", task.EmployeeId ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@status", task.Status);
-                    cmd.Parameters.AddWithValue("@allocationDate", task.AllocationDate);
-                    cmd.Parameters.AddWithValue("@deadlineDate", task.DeadlineDate);
-                    cmd.Parameters.AddWithValue("@taskId", task.TaskId);
+                    SqlTransaction transaction = conn.BeginTransaction();
 
-                    int result = cmd.ExecuteNonQuery();
-                    return result > 0;
+                    try
+                    {
+                        // Update Task
+                        string updateTaskQuery = @"
+                    UPDATE Tasks 
+                    SET Task_Name = @taskName, Project_Id = @projId, Employee_Id = @empId, Status = @status, Allocation_Date = @allocationDate, 
+                        Deadline_Date = @deadlineDate 
+                    WHERE Task_ID = @taskId";
+
+                        SqlCommand updateTaskCmd = new SqlCommand(updateTaskQuery, conn, transaction);
+                        updateTaskCmd.Parameters.AddWithValue("@taskName", task.TaskName);
+                        updateTaskCmd.Parameters.AddWithValue("@projId", task.ProjectId);
+                        updateTaskCmd.Parameters.AddWithValue("@empId", task.EmployeeId ?? (object)DBNull.Value);
+                        updateTaskCmd.Parameters.AddWithValue("@status", task.Status);
+                        updateTaskCmd.Parameters.AddWithValue("@allocationDate", task.AllocationDate);
+                        updateTaskCmd.Parameters.AddWithValue("@deadlineDate", task.DeadlineDate);
+                        updateTaskCmd.Parameters.AddWithValue("@taskId", task.TaskId);
+
+                        int result = updateTaskCmd.ExecuteNonQuery();
+
+                        if (result == 0)
+                        {
+                            // Task not found in the database
+                            throw new TaskNotFoundException($"Task with ID {task.TaskId} not found.");
+                        }
+
+                        // Update Employee if EmployeeId is provided
+                        if (task.EmployeeId.HasValue)
+                        {
+                            string updateEmpQuery = "UPDATE Employee SET Project_Id = @projId WHERE Employee_Id = @empId";
+                            SqlCommand updateEmpCmd = new SqlCommand(updateEmpQuery, conn, transaction);
+                            updateEmpCmd.Parameters.AddWithValue("@projId", task.ProjectId);
+                            updateEmpCmd.Parameters.AddWithValue("@empId", task.EmployeeId);
+                            updateEmpCmd.ExecuteNonQuery();
+                        }
+
+                        // Commit the transaction if everything succeeds
+                        transaction.Commit();
+                        return result > 0;
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Rollback the transaction if there is an error
+                        transaction.Rollback();
+                        throw new DatabaseConnectionException("Error while executing the update task operation.", ex);
+                    }
+                    catch (TaskNotFoundException ex)
+                    {
+                        // Specifically catch TaskNotFoundException
+                        transaction.Rollback();
+                        throw new TaskNotFoundException($"Error: {ex.Message}");
+                    }
+                    catch (Exception ex)
+                    {
+                        // Catch all other exceptions
+                        transaction.Rollback();
+                        throw new ApplicationException("An unexpected error occurred during the task update process.", ex);
+                    }
                 }
             }
             catch (SqlException ex)
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while updating the task details.", ex);
-            }
         }
 
-
-
-        public List<ProjectTask> GetParticularTasks(int empId, int projectId)
+        public List<ProjectTask> GetParticularTasks(int empId)
         {
             List<ProjectTask> tasks = new List<ProjectTask>();
 
@@ -549,11 +654,10 @@ namespace Project_Management.dao
                     }
 
                     conn.Open();
-                    string query = "SELECT * FROM Tasks WHERE Employee_Id = @empId AND Project_Id = @projId";
+                    string query = "SELECT * FROM Tasks WHERE Employee_Id = @empId ";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@empId", empId);
-                    cmd.Parameters.AddWithValue("@projId", projectId);
 
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -582,10 +686,7 @@ namespace Project_Management.dao
             {
                 throw new DatabaseConnectionException("Error while connecting to the database.", ex);
             }
-            catch (Exception ex)
-            {
-                throw new InvalidEntryException("Error occurred while fetching the tasks for the employee and project.", ex);
-            }
+          
         }
 
     }

@@ -1,17 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project_Management.exception
 {
+    // Custom exception class for invalid entries
     public class InvalidEntryException : Exception
     {
-        public InvalidEntryException() { }
+        // Default constructor
+        public InvalidEntryException()
+            : base("An invalid entry was detected.") { }
 
-        public InvalidEntryException(string message) : base(message) { }
+        // Constructor that accepts a custom message
+        public InvalidEntryException(string message)
+            : base(message) { }
 
-        public InvalidEntryException(string message, Exception inner) : base(message, inner) { }
+        // Constructor that accepts a custom message and an inner exception
+        public InvalidEntryException(string message, Exception innerException)
+            : base(message, innerException) { }
     }
 }

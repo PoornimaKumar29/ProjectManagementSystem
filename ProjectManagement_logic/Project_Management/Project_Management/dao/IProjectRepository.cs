@@ -34,7 +34,7 @@ namespace Project_Management.dao
 
         // Get tasks assigned to employee in a specific project
         List<ProjectTask> GetAllTasks();
-        List<ProjectTask> GetParticularTasks(int empId, int projectId);
+        List<ProjectTask> GetParticularTasks(int empId);
 
 
     }

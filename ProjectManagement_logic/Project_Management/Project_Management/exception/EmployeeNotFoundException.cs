@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Project_Management.exception
 {
-    //public class EmployeeNotFoundException : Exception
-    //{
-    //    public EmployeeNotFoundException()
-    //        : base("Employee not found in the database.")
-    //    {
-    //    }
-
-    //    public EmployeeNotFoundException(string message)
-    //        : base(message)
-    //    {
-    //    }
-    //}
     public class EmployeeNotFoundException : Exception
     {
-        public EmployeeNotFoundException() { }
+        // Default constructor with a predefined error message
+        public EmployeeNotFoundException()
+            : base("Employee not found in the system.")
+        {
+        }
 
-        public EmployeeNotFoundException(string message) : base(message) { }
+        // Constructor that allows you to pass a custom message
+        public EmployeeNotFoundException(string message)
+            : base(message)
+        {
+        }
 
-        public EmployeeNotFoundException(string message, Exception inner) : base(message, inner) { }
+        // Constructor that allows for both a custom message and an inner exception
+        public EmployeeNotFoundException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
     }
 }

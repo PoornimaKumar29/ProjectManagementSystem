@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 
 namespace Project_Management.exception
 {
-    //public class ProjectNotFoundException : Exception
-    //{
-    //    public ProjectNotFoundException()
-    //        : base("Project not found in the database.")
-    //    {
-    //    }
-
-    //    public ProjectNotFoundException(string message)
-    //        : base(message)
-    //    {
-    //    }
-    //}
+  
     public class ProjectNotFoundException : Exception
     {
-        public ProjectNotFoundException() { }
+        // Default constructor with a predefined error message
+        public ProjectNotFoundException()
+            : base("Project not found in the system.")
+        {
+        }
 
-        public ProjectNotFoundException(string message) : base(message) { }
+        // Constructor that allows you to pass a custom message
+        public ProjectNotFoundException(string message)
+            : base(message)
+        {
+        }
 
-        public ProjectNotFoundException(string message, Exception inner) : base(message, inner) { }
+        // Constructor that allows for both a custom message and an inner exception
+        public ProjectNotFoundException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
     }
 }

@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\dao\\projectrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\dao\\projectrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\entity\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\entity\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\dao\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\dao\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\entity\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\entity\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\projectmanagementtest\\projectmanagementtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|solutionrelative:projectmanagementtest\\projectmanagementtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\invalidsqlqueryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\invalidsqlqueryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\missingrequiredfieldexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\missingrequiredfieldexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\projectmanagementtest\\projecttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|solutionrelative:projectmanagementtest\\projecttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\invalidentryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\invalidentryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\tasknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\tasknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\projectnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\projectnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\employeenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\employeenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\projectnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\projectnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\exception\\tasknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\exception\\tasknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\entity\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\entity\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\entity\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|solutionrelative:project_management\\entity\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\projectmanagementtest\\projectmanagementtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E184DDD1-2582-495A-9196-821087F6253C}|ProjectManagementTest\\ProjectManagementTest.csproj|solutionrelative:projectmanagementtest\\projectmanagementtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B6B0106-9775-4DFB-A63B-DCC57E1596E7}|Project_Management\\Project_Management.csproj|d:\\poornima kumar\\hexaware training\\project management\\projectmanagement_logic\\project_management\\project_management\\connection.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -74,8 +74,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 293,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectRepositoryImpl.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\dao\\ProjectRepositoryImpl.cs",
+              "RelativeDocumentMoniker": "Project_Management\\dao\\ProjectRepositoryImpl.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\dao\\ProjectRepositoryImpl.cs",
+              "RelativeToolTip": "Project_Management\\dao\\ProjectRepositoryImpl.cs",
+              "ViewState": "AgIAAJcCAAAAAAAAAAAuwDQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T14:42:42.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvalidEntryException.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidEntryException.cs",
+              "RelativeDocumentMoniker": "Project_Management\\exception\\InvalidEntryException.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidEntryException.cs",
+              "RelativeToolTip": "Project_Management\\exception\\InvalidEntryException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:05:30.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectTest.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\ProjectManagementTest\\ProjectTest.cs",
+              "RelativeDocumentMoniker": "ProjectManagementTest\\ProjectTest.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\ProjectManagementTest\\ProjectTest.cs",
+              "RelativeToolTip": "ProjectManagementTest\\ProjectTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:03:33.968Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -84,53 +123,79 @@
               "RelativeDocumentMoniker": "Project_Management\\dao\\IProjectRepository.cs",
               "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\dao\\IProjectRepository.cs",
               "RelativeToolTip": "Project_Management\\dao\\IProjectRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBwAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T18:29:12.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "ProjectNotFoundException.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\ProjectNotFoundException.cs",
+              "RelativeDocumentMoniker": "Project_Management\\exception\\ProjectNotFoundException.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\ProjectNotFoundException.cs",
+              "RelativeToolTip": "Project_Management\\exception\\ProjectNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:51:37.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatabaseConnectionException.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\DatabaseConnectionException.cs",
+              "RelativeDocumentMoniker": "Project_Management\\exception\\DatabaseConnectionException.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\DatabaseConnectionException.cs",
+              "RelativeToolTip": "Project_Management\\exception\\DatabaseConnectionException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T16:36:12.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\Program.cs",
               "RelativeDocumentMoniker": "Project_Management\\Program.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\Program.cs*",
-              "RelativeToolTip": "Project_Management\\Program.cs*",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAUwAgBAAAzAAAAAAAAAA==",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\Program.cs",
+              "RelativeToolTip": "Project_Management\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwLsAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T17:22:46.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Project.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\Project.cs",
-              "RelativeDocumentMoniker": "Project_Management\\entity\\Project.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\Project.cs",
-              "RelativeToolTip": "Project_Management\\entity\\Project.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBoAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "EmployeeNotFoundException.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\EmployeeNotFoundException.cs",
+              "RelativeDocumentMoniker": "Project_Management\\exception\\EmployeeNotFoundException.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\EmployeeNotFoundException.cs",
+              "RelativeToolTip": "Project_Management\\exception\\EmployeeNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:19:28.876Z",
+              "WhenOpened": "2025-04-09T18:51:23.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProjectTask.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\ProjectTask.cs",
-              "RelativeDocumentMoniker": "Project_Management\\entity\\ProjectTask.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\ProjectTask.cs",
-              "RelativeToolTip": "Project_Management\\entity\\ProjectTask.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwCgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "TaskNotFoundException.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\TaskNotFoundException.cs",
+              "RelativeDocumentMoniker": "Project_Management\\exception\\TaskNotFoundException.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\TaskNotFoundException.cs",
+              "RelativeToolTip": "Project_Management\\exception\\TaskNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:56:55.838Z",
+              "WhenOpened": "2025-04-13T16:39:18.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ProjectManagementTest.csproj",
               "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\ProjectManagementTest\\ProjectManagementTest.csproj",
               "RelativeDocumentMoniker": "ProjectManagementTest\\ProjectManagementTest.csproj",
@@ -142,87 +207,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatabaseConnectionException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\DatabaseConnectionException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\DatabaseConnectionException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\DatabaseConnectionException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\DatabaseConnectionException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:39:34.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InvalidSqlQueryException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidSqlQueryException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\InvalidSqlQueryException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidSqlQueryException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\InvalidSqlQueryException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:42:51.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InvalidEntryException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidEntryException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\InvalidEntryException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\InvalidEntryException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\InvalidEntryException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:39:52.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MissingRequiredFieldException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\MissingRequiredFieldException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\MissingRequiredFieldException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\MissingRequiredFieldException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\MissingRequiredFieldException.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:40:12.323Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "TaskNotFoundException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\TaskNotFoundException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\TaskNotFoundException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\TaskNotFoundException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\TaskNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "ProjectTask.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\ProjectTask.cs",
+              "RelativeDocumentMoniker": "Project_Management\\entity\\ProjectTask.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\ProjectTask.cs",
+              "RelativeToolTip": "Project_Management\\entity\\ProjectTask.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:39:18.187Z"
+              "WhenOpened": "2025-04-09T17:56:55.838Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "EmployeeNotFoundException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\EmployeeNotFoundException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\EmployeeNotFoundException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\EmployeeNotFoundException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\EmployeeNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\Project.cs",
+              "RelativeDocumentMoniker": "Project_Management\\entity\\Project.cs",
+              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\entity\\Project.cs",
+              "RelativeToolTip": "Project_Management\\entity\\Project.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:51:23.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProjectNotFoundException.cs",
-              "DocumentMoniker": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\ProjectNotFoundException.cs",
-              "RelativeDocumentMoniker": "Project_Management\\exception\\ProjectNotFoundException.cs",
-              "ToolTip": "D:\\POORNIMA KUMAR\\Hexaware Training\\Project Management\\ProjectManagement_logic\\Project_Management\\Project_Management\\exception\\ProjectNotFoundException.cs",
-              "RelativeToolTip": "Project_Management\\exception\\ProjectNotFoundException.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:51:37.161Z"
+              "WhenOpened": "2025-04-09T18:19:28.876Z"
             },
             {
               "$type": "Document",

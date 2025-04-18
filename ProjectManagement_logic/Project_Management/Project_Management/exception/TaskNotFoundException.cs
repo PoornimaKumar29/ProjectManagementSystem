@@ -8,10 +8,22 @@ namespace Project_Management.exception
 {
     public class TaskNotFoundException : Exception
     {
-        public TaskNotFoundException() { }
+        // Default constructor with a predefined error message
+        public TaskNotFoundException()
+            : base("Task not found in the system.")
+        {
+        }
 
-        public TaskNotFoundException(string message) : base(message) { }
+        // Constructor that allows you to pass a custom message
+        public TaskNotFoundException(string message)
+            : base(message)
+        {
+        }
 
-        public TaskNotFoundException(string message, Exception inner) : base(message, inner) { }
+        // Constructor that allows for both a custom message and an inner exception
+        public TaskNotFoundException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
     }
 }
